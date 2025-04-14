@@ -1,0 +1,229 @@
+:root {
+  --dark-blue: #1a2e35; /* Hospital navy tone */
+  --teal-green: #4db6ac; /* Calm clinical teal */
+  --soft-blue: #e6f2f8; /* Background soft blue */
+  --sky-white: #e9ecef; /* Slightly warm white */
+  --accent-grey: #90a4ae; /* Secondary text/buttons */
+  --pure-white: #FAF9F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  background-color: var(--soft-blue);
+  color: var(--dark-blue);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5em;
+  color: var(--pure-white);
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--pure-white);
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--teal-green);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--pure-white);
+  color: var(--dark-blue);
+  padding: 100px 40px;
+  animation: fadeIn 1s ease;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: var(--dark-blue);
+}
+
+.hero-text p {
+  font-size: 1.25em;
+  margin-bottom: 30px;
+  color: var(--accent-grey);
+}
+
+.hero-text .btn {
+  padding: 12px 28px;
+  background: var(--teal-green);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--pure-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background: var(--dark-blue);
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    flex: 1 1 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4em;
+  }
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about, .upload, .contact {
+  background-color: var(--pure-white);
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  animation: fadeUp 0.7s ease;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+}
+
+/* Upload Form */
+#uploadForm {
+  margin-top: 20px;
+}
+
+#fileInput, button {
+  padding: 12px 15px;
+  font-size: 1em;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+#fileInput {
+  background: var(--pure-white);
+  color: var(--dark-blue);
+}
+
+#uploadForm button {
+  background-color: var(--teal-green);
+  color: var(--pure-white);
+  transition: all 0.3s ease;
+}
+
+#uploadForm button:hover {
+  background-color: var(--dark-blue);
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: var(--dark-blue);
+  color: var(--pure-white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.secondary-btn .arrow-icon {
+  margin-left: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.secondary-btn:hover .arrow-icon {
+  transform: translateY(4px);
+}
