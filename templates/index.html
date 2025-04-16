@@ -23,6 +23,8 @@
   <section class="hero" id="hero">
     <div class="hero-container">
       <div class="hero-text">
+        <div class="blur-circle top"></div>
+       <div class="blur-circle bottom"></div>
         <h1>Tablet Image Classifier</h1>
         <p>Upload an image to find which row your tablet belongs to using AI-based OCR + CNN analysis.</p>
         <div class="hero-buttons">
@@ -32,6 +34,7 @@
         </div>
       </div>
       <div class="hero-image">
+        <div class="image-blur"></div>
         <img src="https://images.pexels.com/photos/9902135/pexels-photo-9902135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tablet Grid Preview" >
       </div>
     </div>
@@ -42,18 +45,47 @@
   <!-- About Section -->
   <section class="about" id="about">
     <h2>About</h2>
-    <p>This tool uses a hybrid OCR + CNN approach to identify tablet names from image inputs and maps them to alphabetical rows.</p>
+    <p>
+      Manual tablet sorting is time-consuming and error-prone. Traditional methods of sorting tablets based on their names or attributes involve human intervention, which can be inefficient and prone to mistakes.
+    </p><br/>
+    <p>
+      Develop an automated system for tablet name recognition and row placement. The system should be able to accurately identify tablet names from images and automatically assign them to designated rows based on predefined criteria.
+    </p>
+  
+    <!-- Features inside About section -->
+    <div class="features-container">
+      <div class="feature">
+        <img src="{{ url_for('static', filename='icons/developer-icon.svg') }}" alt="Developer Friendly">
+        <h3>Built for Developers</h3>
+        <p>TabletSorter is built to make your life easier. With powerful OCR and CNN models, it's fast, accurate, and easy to integrate.</p>
+      </div>
+      <div class="feature">
+        <img src="{{ url_for('static', filename='icons/design-icon.svg') }}" alt="Modern Design">
+        <h3>Designed to be Modern</h3>
+        <p>Built with clean visuals and intuitive layout, the interface is minimal, accessible, and beautiful.</p>
+      </div>
+      <div class="feature">
+        <img src="{{ url_for('static', filename='icons/docs-icon.svg') }}" alt="Documentation">
+        <h3>Documentation for Everything</h3>
+        <p>We provide guides and code snippets, so you can set up and test the app with zero guesswork.</p>
+      </div>
+    </div>
   </section>
+  
 
-  <!-- Upload Section -->
-  <section class="upload" id="upload">
-    <h2>Upload Tablet Image</h2>
-    <form id="uploadForm" enctype="multipart/form-data">
-      <input type="file" name="file" id="fileInput" accept="image/*" required>
-      <button type="submit">Classify</button>
-    </form>
-    <p id="result" class="result-text"></p>
-  </section>
+ <!-- Upload Section -->
+<section class="upload" id="upload">
+  <h2>Upload Tablet Image</h2>
+  <form id="uploadForm" enctype="multipart/form-data" class="upload-form">
+    <label for="fileInput" class="upload-dropzone">
+      Drop your image here or click to browse
+      <input type="file" name="file" id="fileInput" accept="image/*" required hidden>
+    </label>
+    <button type="submit" class="upload-btn">Classify Image</button>
+  </form>
+  <p id="result" class="result-text"></p>
+</section>
+
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
