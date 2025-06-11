@@ -58,10 +58,7 @@ Open your browser and go to: `http://localhost:5000`
 
 ## 🖼️ Screenshots
 
-> Include screenshots of the web UI showing image upload, OCR result, and voice feedback.
-> _You can place them in a `/screenshots` folder and reference like so:_
-
-![Upload Interface]()
+![Upload Interface](screenshots/userinterface.jpg)
 ![OCR Result](screenshots/uploadimage.jpg)
 
 ---
