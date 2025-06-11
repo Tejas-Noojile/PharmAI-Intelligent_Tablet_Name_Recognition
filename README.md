@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f794e0dc-8efc-43b1-b4cc-6ca21efa10a2)
+
 # 💊 PharmAI – Intelligent Tablet Name Recognition & Row Placement System
 
 PharmAI is an OCR-powered system designed to automate the identification and placement of pharmaceutical tablets using image processing, machine learning, and voice feedback. This project aims to enhance pharmacy workflows by reducing manual sorting errors and improving efficiency through AI-driven automation.
